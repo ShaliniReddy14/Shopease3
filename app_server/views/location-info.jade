@@ -1,0 +1,76 @@
+extends layout
+include _includes/sharedHTMLfunctions
+
+block content
+  // Banner Section
+  .row.banner
+    .col-12
+      h1= pageHeader.title
+
+  // Main Content Section
+  .row
+    .col-12.col-lg-9
+      .row
+        .col-12.col-lg-6
+          // Display rating and address of the location
+          p.rating
+            +outputRating(location.rating)
+          p= location.address
+          
+          // Card for Opening Hours
+          .card.card-primary
+            .card-body
+              h2.card-title Opening Hours
+              each time in location.openingTimes
+                p.card-text
+                  | #{time.days}:
+                  if time.closed
+                    | Closed
+                  else
+                    | #{time.opening} - #{time.closing}
+
+          // Card for Facilities
+          .card.card-primary
+            .card-body
+              h2.card-title Facilities
+              each facility in location.facilities
+                span.badge.badge-warning
+                  i.fa.fa-check
+                  | &nbsp;#{facility}
+
+        // Location Map Section
+        .col-12.col-lg-6.location-map
+          .card.card-primary
+            .card-body
+              h2.card-title Location Map
+              a(href='https://maps.app.goo.gl/uQsxKjU3TxyG364x9', target='_blank') 
+                img.img-fluid.rounded(src='https://res.cloudinary.com/dddbzt904/image/upload/v1727720723/loc_szh9x5.png', alt='Location Map')
+
+  // Review Section
+  .row
+    .col-12
+      .card.card-primary.review-card
+        .card-body
+          a.btn.btn-primary.float-right(href='/location/review/new') Add Review
+          h2.card-title Customer Reviews
+          
+          // Display each review
+          if location.reviews && location.reviews.length > 0
+            each review in location.reviews
+              .row.review
+                .col-12.no-gutters.review-header
+                  span.rating
+                    +outputRating(review.rating)
+                  span.reviewAuthor #{review.author}
+                  small.reviewTimestamp #{review.timestamp}
+
+                .col-12
+                  p !{(review.reviewText).replace(/\n/g, '<br/>')}
+          else
+            p.text-muted No reviews available for this location.
+
+  // Sidebar Section
+  .col-12.col-lg-3
+    p.lead= location.name
+    p= sidebar.context
+    p= sidebar.callToAction

@@ -1,0 +1,126 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ775/zrZ6htclxOk36E5RciOjHB6ywQ/9B6', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://www.pngall.com/wp-content/uploads/1/Electronic-PNG-Pic.png')
+    link(rel='stylesheet', href='https://www.pngall.com/wp-content/uploads/1/Electronic-PNG-Pic.png')
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f7f6f2;
+        color: #333;
+      }
+      h1, h2, h3, h4 {
+        font-weight: 600;
+      }
+      .navbar {
+        background-color: #faf3e0;
+      }
+      .navbar-nav {
+        flex-direction: column !important; /* Arrange navbar links in a single column */
+      }
+      .navbar-nav .nav-link {
+        color: #333;
+        font-weight: 500;
+        padding: 10px 0; /* Adds space between links */
+      }
+      .nav-link.active {
+        color: #f28b82;
+      }
+      .navbar-brand {
+        color: #ffab91;
+        font-weight: bold;
+      }
+      .content {
+        padding-bottom: 50px; /* Ensure enough space before footer */
+      }
+      footer {
+        background-color: #ffab91;
+      }
+      footer a {
+        color: #fff;
+      }
+      .promo-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      /* Square Cards */
+      .promo {
+        width: 250px;
+        height: 300px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+      }
+      .promo img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+      }
+      .promo p {
+        padding: 10px 0;
+        font-size: 14px;
+      }
+      .footer {
+        margin-top: 50px; /* Add margin to prevent overlap */
+      }
+
+
+  body
+    nav.navbar.fixed-top.navbar-expand-md.navbar-light.shadow-sm
+      .container
+        a.navbar-brand.navhead(href='/') 
+          i.fas.fa-tshirt.mr-2
+          | Trendy Treasures
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarMain')
+          span.navbar-toggler-icon
+        #navbarMain.navbar-collapse.collapse
+          .d-flex.flex-column.align-items-start.w-100
+            ul.navbar-nav.mr-auto
+              li.nav-item
+                a.nav-link(href='/about/', class='nav-link active') About Us!
+              
+
+    // Main Content Section
+    .container.content.pt-5.mt-5
+      block content
+     
+    // Promotional Section
+    .container.mt-5
+      h3.text-center.mb-5.p-3.promotion-heading Stylish Deals You Can't Miss!
+      .promo-container
+        .promo.text-center.shadow-sm
+          img(src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKq01JxNXXqtPIRrQPdKsZddW_H3qqeVFdBw&s', alt='Promotional Image 1', class='img-fluid')
+          p Discover the latest trends in fashion with our exclusive collection at Trendy Treasures!
+          
+        .promo.text-center.shadow-sm
+          img(src='https://cdn.vibecity.in/providers/6496f744617db20d8ee2748c/310e7544-4b9d-4fc2-9de2-fb076b340f31_105a2b0d-11df-4a30-b9f1-df5bc86b729f-4X.png', alt='Promotional Image 2', class='img-fluid')
+          p Shop our curated selection of clothing and accessories that cater to all styles.
+
+        .promo.text-center.shadow-sm
+          img(src='https://t3.ftcdn.net/jpg/03/34/79/68/360_F_334796865_VVTjg49nbLgQPG6rgKDjVqSb5XUhBVsW.jpg', alt='Promotional Image 3', class='img-fluid')
+          p From casual wear to formal attire, find the perfect outfit for every occasion!
+
+    // Footer Section
+    footer.footer.text-white.mt-5.py-4
+      .container
+        .row
+          .col-12.text-center
+            p.mb-0
+              small © 2024 SHOPEASE - Developed Using MEAN Stack
+            p.mt-2
+              a.text-white.mr-3(href='/privacy') Privacy Policy
+              a.text-white.mr-3(href='/terms') Terms of Service
+              a.text-white(href='/contact') Contact Us
+
+    // Scripts - Load Bootstrap, jQuery, and Popper.js for proper functionality
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+    script(src='https://www.pngall.com/wp-content/uploads/1/Electronic-PNG-Pic.png', integrity='sha384-ChfqqxuZUCnJSK3+mMXu+mx1T03ul72x4vVXQlvIv6IWnqUF0CZSc5pQa51r8cv', crossorigin='anonymous')

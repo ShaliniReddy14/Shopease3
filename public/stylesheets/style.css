@@ -1,0 +1,161 @@
+/* You can add global styles to this file, and also import other style files */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("https://cdn.pixabay.com/photo/2022/07/23/16/05/shopping-mall-7340181_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+/* Header */
+.navbar {
+    background-color: #007bff;
+    color: white;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: #f0f0f0;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f0f0f0;
+}
+
+/* Banner Section */
+.banner {
+    background-color: rgba(52, 58, 64, 0.8); /* Optional: semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+    margin-bottom: 30px;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* Content Section */
+.content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    border-radius: 8px; /* Optional */
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card .card-text {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.card-block {
+    padding: 20px;
+}
+
+/* Facilities Badge */
+.badge-warning {
+    background-color: #ffc107;
+    font-size: 0.9rem;
+    margin-right: 5px;
+}
+
+/* Map */
+.location-map img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Review Section */
+.review-card {
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.review h2 {
+    font-size: 1.4rem;
+}
+
+.reviewAuthor {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.reviewTimestamp {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.rating {
+    color: #f39c12;
+}
+
+.review {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer small {
+    color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .card-block {
+        padding: 15px;
+    }
+
+    .review-card {
+        padding: 10px;
+    }
+}
+
+.centered {
+    text-align: center;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
